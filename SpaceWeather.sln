@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPetras.SpaceWeatherLib", "src\RPetras.SpaceWeatherLib\RPetras.SpaceWeatherLib.csproj", "{4E9A21AC-57C2-4D9E-B86C-1452397CA23D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPetras.SpaceWeatherLib.Tests", "test\RPetras.SpaceWeatherLib.Tests\RPetras.SpaceWeatherLib.Tests.csproj", "{00501FB2-57CA-447F-8639-2CFD12061E14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPetras.SpaceWeatherCLI", "src\RPetras.SpaceWeatherCLI\RPetras.SpaceWeatherCLI.csproj", "{FB53300B-8D39-47BB-A59C-313D876638AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E9A21AC-57C2-4D9E-B86C-1452397CA23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9A21AC-57C2-4D9E-B86C-1452397CA23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9A21AC-57C2-4D9E-B86C-1452397CA23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9A21AC-57C2-4D9E-B86C-1452397CA23D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00501FB2-57CA-447F-8639-2CFD12061E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00501FB2-57CA-447F-8639-2CFD12061E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00501FB2-57CA-447F-8639-2CFD12061E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00501FB2-57CA-447F-8639-2CFD12061E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB53300B-8D39-47BB-A59C-313D876638AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB53300B-8D39-47BB-A59C-313D876638AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB53300B-8D39-47BB-A59C-313D876638AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB53300B-8D39-47BB-A59C-313D876638AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BCDB7BC-A9FF-43AF-ABEE-3A65E13B97A7}
+	EndGlobalSection
+EndGlobal
