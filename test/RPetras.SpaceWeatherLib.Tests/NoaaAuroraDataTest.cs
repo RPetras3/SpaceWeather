@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace RPetras.SpaceWeatherLib.Tests;
 
 [TestClass]
@@ -23,6 +25,20 @@ public class NoaaAuroraDataTest
 
     [TestMethod]
     public void TestParseInvalid()
+    {
+        try
+        {
+            NoaaAuroraData.Parse("[");
+            Assert.Fail("Exception not generated on invalid json data.");
+        }
+        catch (JsonException)
+        {
+            // Expected exception detected
+        }
+    }
+
+    [TestMethod]
+    public void TestParseIncorrectType()
     {
         Assert.ThrowsException<ArgumentException>(() => NoaaAuroraData.Parse("[]"));
     }

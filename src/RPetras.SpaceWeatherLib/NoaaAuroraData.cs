@@ -26,7 +26,7 @@ public record NoaaAuroraData(DateTime ObservationTime, DateTime ForecastTime, Fr
     /// <exception cref="ArgumentException">Thrown on invalid json data</exception>
     public static NoaaAuroraData Parse(string jsonText)
     {
-        var json = JsonNode.Parse(jsonText) ?? throw new ArgumentException("Invalid NOAA json data", nameof(jsonText));
+        var json = JsonNode.Parse(jsonText) as JsonObject ?? throw new ArgumentException("Invalid NOAA json data", nameof(jsonText));
         var observationTimeText = json["Observation Time"]?.ToString() ?? throw new ArgumentException("Invalid NOAA json observation time", nameof(jsonText));
         var forecastTimeText = json["Forecast Time"]?.ToString() ?? throw new ArgumentException("Invalid NOAA json forecast time", nameof(jsonText));
         var observationTime = DateTime.Parse(observationTimeText);
