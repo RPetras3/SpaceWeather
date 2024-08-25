@@ -5,7 +5,26 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>RPetras.SpaceWeatherCLI.Program</StartupObject>
+    <Title>Space Weather command line utility</Title>
+    <Version>0.0.0</Version>
+    <Authors>Rick Petras</Authors>
+    <Description>A command line utility for reading information about space weather such as aurora intensity.</Description>
+    <Copyright>Copyright Richard Petras</Copyright>
+    <PackageProjectUrl>https://github.com/RPetras3/SpaceWeather</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>space; aurora</PackageTags>
+    <PackAsTool>True</PackAsTool>
+    <ToolCommandName>space-weather</ToolCommandName>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RPetras.SpaceWeatherLib\RPetras.SpaceWeatherLib.csproj" />
