@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\RPetras.SpaceWeatherCLI\RPetras.SpaceWeatherCLI.csproj" />
     <ProjectReference Include="..\..\src\RPetras.SpaceWeatherLib\RPetras.SpaceWeatherLib.csproj" />
   </ItemGroup>
 
