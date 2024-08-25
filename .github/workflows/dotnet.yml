@@ -23,7 +23,7 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore .NET tools
-      run: dotnet tool install
+      run: dotnet tool restore
 
     - name: Restore dependencies
       run: dotnet restore
