@@ -1,0 +1,20 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (1.0.0)'
+        required: true
+        type: string
+
+jobs:
+  build:
+    name: Build Artifacts
+    uses: ./.github/workflows/build.yml
+    with: 
+      os: ubuntu-latest
+      version: ${{ inputs.version }}
+    secrets: 
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
