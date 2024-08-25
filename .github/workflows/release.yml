@@ -7,6 +7,14 @@ on:
         description: 'Release version (1.0.0)'
         required: true
         type: string
+      publish:
+        description: 'Publish type'
+        required: true
+        default: 'release'
+        type: choice
+        options:
+        - none
+        - release
 
 jobs:
   build:
@@ -17,3 +25,27 @@ jobs:
       version: ${{ inputs.version }}
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  release:
+    name: Create Release
+    permissions:
+      contents: write
+      packages: write
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Download Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: artifacts-ubuntu-latest
+        path: artifacts
+
+    - name: Create Release
+      if: ${{ inputs.publish == 'release' }}
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "artifacts/**/*"
+        generateReleaseNotes: true
+        tag: ${{ inputs.version }}

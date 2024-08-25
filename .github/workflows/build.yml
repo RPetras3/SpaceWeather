@@ -68,7 +68,7 @@ jobs:
         end
         /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
-    - name: Create Dotnet Tool
+    - name: Create SpaceWeatherCLI Nuget Pkg
       working-directory: src/RPetras.SpaceWeatherCLI
       run: >
         dotnet pack
@@ -76,7 +76,7 @@ jobs:
         --no-restore
         --property:PackageVersion=${{ inputs.version }}
 
-    - name: Create Dotnet Tool
+    - name: Create SpaceWeatherLib Nuget Pkg
       working-directory: src/RPetras.SpaceWeatherLib
       run: >
         dotnet pack
