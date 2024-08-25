@@ -9,6 +9,5 @@ jobs:
     with: 
       os: ubuntu-latest
       version: 0.0.0-run.${{ github.run_number }}
-    secrets: 
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

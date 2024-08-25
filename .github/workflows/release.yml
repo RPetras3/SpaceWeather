@@ -15,6 +15,5 @@ jobs:
     with: 
       os: ubuntu-latest
       version: ${{ inputs.version }}
-    secrets: 
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
